@@ -10,7 +10,12 @@ if (environment.production) {
 
 setTimeout(() => 
   {platformBrowserDynamic().bootstrapModule(AppModule);
-    document.getElementById("loading").style.display = "none";
+    document.getElementById("loading").classList.add('animated'); 
+    document.getElementById("loading").classList.add('zoomOut');
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+    }, 500);
+    
   }
 , 2000);
 
