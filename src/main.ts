@@ -10,7 +10,7 @@ if (environment.production) {
 
 setTimeout(() => 
   {platformBrowserDynamic().bootstrapModule(AppModule);
-  
+    document.getElementById("loading").style.display = "none";
   }
 , 2000);
 
